@@ -1,87 +1,85 @@
-import * as React from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Check, Info } from "lucide-react"
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from "@/components/ui/tooltip"
 
 const pricingData = {
   plans: [
     {
-      name: "Старт",
-      description: "Для начинающих и небольших команд.",
+      name: "Чиби",
+      description: "Милая мини-фигурка в стиле чиби.",
       features: [
         {
-          name: "Базовое управление задачами",
-          tooltip: "Основные функции для начала работы",
+          name: "Высота ~8 см",
+          tooltip: "Компактный размер, удобно на полку или стол",
         },
         {
-          name: "1 автоматизация на процесс",
-          tooltip: "Автоматизируйте одну задачу в каждом процессе",
+          name: "Базовая ручная роспись",
+          tooltip: "Аккуратная роспись основных цветов персонажа",
         },
         {
-          name: "5 ГБ хранилище",
-          tooltip: "Безопасное хранение файлов и документов",
+          name: "Простая поза",
+          tooltip: "Стоячая или сидячая поза без сложных элементов",
         },
       ],
       pricing: {
-        monthly: 0,
-        annually: 0,
+        monthly: 3900,
+        annually: 3900,
       },
       variant: "secondary",
     },
     {
-      name: "Про",
-      description: "Для растущих команд, готовых масштабироваться.",
+      name: "Стандарт",
+      description: "Детализированная фигурка вашего персонажа.",
       badge: "Популярный",
       features: [
         {
-          name: "Неограниченные доски",
-          tooltip: "Создавайте столько досок, сколько нужно",
+          name: "Высота ~15 см",
+          tooltip: "Оптимальный размер для проработки деталей",
         },
         {
-          name: "Продвинутая автоматизация",
-          tooltip: "Мощные возможности для сложных процессов",
+          name: "Детальная роспись шерсти",
+          tooltip: "Проработка фактуры, переходов и узоров",
         },
         {
-          name: "50 ГБ хранилище",
-          tooltip: "Расширенное хранилище для растущих команд",
+          name: "Поза по вашему рефу",
+          tooltip: "Любая поза и выражение из вашего арта",
         },
         {
-          name: "Интеграции",
-          tooltip: "Подключение любимых инструментов",
+          name: "1 аксессуар в комплекте",
+          tooltip: "Оружие, украшение или предмет на выбор",
         },
       ],
       pricing: {
-        monthly: 2900,
-        annually: 29000,
+        monthly: 8900,
+        annually: 8900,
       },
       variant: "default",
     },
     {
-      name: "Бизнес",
-      description: "Для крупных организаций с особыми потребностями.",
+      name: "Премиум",
+      description: "Коллекционная фигурка с максимальной детализацией.",
       features: [
         {
-          name: "Персональная поддержка",
-          tooltip: "Приоритетная поддержка с персональным менеджером",
+          name: "Высота ~25 см",
+          tooltip: "Крупная статуэтка музейного уровня",
         },
         {
-          name: "Кастомные процессы",
-          tooltip: "Создавайте процессы под ваши задачи",
+          name: "Сложная динамичная сцена",
+          tooltip: "Подставка, эффекты и несколько фигур",
         },
         {
-          name: "150 ГБ хранилище",
-          tooltip: "Корпоративное хранилище данных",
+          name: "Премиум-роспись и эффекты",
+          tooltip: "Глянец, свечение, металлик и тонкая деталировка",
         },
         {
-          name: "Расширенная безопасность",
-          tooltip: "Продвинутые функции защиты и контроля",
+          name: "Подарочная упаковка",
+          tooltip: "Защитный бокс и сертификат подлинности",
         },
       ],
       pricing: {
-        monthly: 12900,
-        annually: 129000,
+        monthly: 18900,
+        annually: 18900,
       },
       variant: "secondary",
     },
@@ -89,36 +87,17 @@ const pricingData = {
 }
 
 export function PricingSection4() {
-  const [billingPeriod, setBillingPeriod] = React.useState("monthly")
-
   return (
     <section className="py-16 md:py-24 pattern-1 bg-muted" aria-labelledby="pricing-section-title-4">
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col items-center gap-4 md:gap-5 max-w-xl text-center">
-            <p className="text-base font-semibold text-muted-foreground">Тарифы</p>
+            <p className="text-base font-semibold text-primary">Каталог</p>
             <h2 id="pricing-section-title-4" className="text-3xl md:text-4xl font-bold">
-              Простые и понятные цены
+              Форматы фигурок и цены
             </h2>
-            <p className="text-base text-muted-foreground">Выберите план, который подходит вашей команде.</p>
+            <p className="text-base text-muted-foreground">Выберите формат — финальная цена зависит от сложности персонажа.</p>
           </div>
-
-          <Tabs value={billingPeriod} onValueChange={setBillingPeriod} className="w-fit">
-            <TabsList className="bg-black/30 h-10 p-1 rounded-[40px]">
-              <TabsTrigger
-                value="monthly"
-                className="rounded-full px-3 py-1.5 data-[state=active]:bg-background data-[state=active]:shadow-sm"
-              >
-                Ежемесячно
-              </TabsTrigger>
-              <TabsTrigger
-                value="annually"
-                className="rounded-full px-3 py-1.5 data-[state=active]:bg-background data-[state=active]:shadow-sm"
-              >
-                Ежегодно
-              </TabsTrigger>
-            </TabsList>
-          </Tabs>
 
           <div className="flex flex-col lg:flex-row gap-6 lg:max-w-5xl w-full mx-auto">
             {pricingData.plans.map((plan, index) => (
@@ -131,17 +110,20 @@ export function PricingSection4() {
                     </p>
                   </div>
 
-                  <div className="flex items-end gap-0.5">
+                  <div className="flex items-end gap-1">
+                    <span className={`text-base leading-6 ${index === 2 ? "opacity-70" : "text-muted-foreground"}`}>
+                      от
+                    </span>
                     <span className="text-4xl font-semibold leading-10">
-                      {billingPeriod === "monthly" ? plan.pricing.monthly : plan.pricing.annually}
+                      {plan.pricing.monthly.toLocaleString("ru-RU")}
                     </span>
                     <span className={`text-base leading-6 ${index === 2 ? "opacity-70" : "text-muted-foreground"}`}>
-                      {plan.pricing.monthly === 0 ? "" : ` р/${billingPeriod === "monthly" ? "мес" : "год"}`}
+                      ₽
                     </span>
                   </div>
 
                   <Button variant={index === 2 ? "secondary" : "default"} className="w-full">
-                    {plan.pricing.monthly === 0 ? "Начать бесплатно" : "Выбрать"}
+                    Заказать
                   </Button>
                 </div>
 

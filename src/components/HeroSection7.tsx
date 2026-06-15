@@ -9,17 +9,17 @@ export function HeroSection7() {
         <div className="flex gap-12 lg:gap-16">
           <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
             <h1 id="hero-heading" className="text-foreground text-3xl lg:text-5xl font-bold flex-1">
-              Работай умнее, а не больше со <span className="text-primary">СмарФлоу</span>
+              Авторские фигурки из смолы — <span className="text-primary">ваш фурсона</span> оживает
             </h1>
             <div className="flex-1 w-full flex flex-col gap-8">
               <p className="text-muted-foreground text-base lg:text-lg">
-                Автоматизируй рабочие процессы, упрощай задачи и работай в команде без лишних усилий. Все инструменты в одной платформе для максимальной продуктивности.
+                Создаём детализированные фигурки антропоморфных персонажей из качественной фотополимерной смолы. Ручная роспись, любой образ по вашему рефу — от милого лиса до харизматичного дракона.
               </p>
 
               <div className="flex flex-col lg:flex-row gap-3">
-                <Button>Попробовать бесплатно</Button>
+                <Button>Заказать фигурку</Button>
                 <Button variant="ghost">
-                  Узнать больше
+                  Смотреть работы
                   <ArrowRight className="ml-2" />
                 </Button>
               </div>
@@ -29,8 +29,8 @@ export function HeroSection7() {
         <div className="w-full overflow-hidden rounded-xl border bg-background shadow-xl">
           <AspectRatio ratio={16 / 9}>
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero%20image-BfDDyqA7gEJi5nCcYfKEbZOJR8pYrr.png"
-              alt="Интерфейс СмартФлоу со статистикой заказов и метриками доходов"
+              src="https://cdn.poehali.dev/projects/66ec152e-fec4-43e7-a702-c5d4bfb67143/files/5b262e02-8453-4fab-a329-9f0fbe48eb84.jpg"
+              alt="Фигурка антропоморфного лиса из фотополимерной смолы ручной работы"
               className="object-cover w-full h-full"
             />
           </AspectRatio>

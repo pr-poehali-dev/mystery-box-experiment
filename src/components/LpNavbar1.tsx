@@ -4,9 +4,9 @@ import { Menu, X } from "lucide-react"
 import { useState } from "react"
 
 const MENU_ITEMS = [
-  { label: "Возможности", href: "#" },
+  { label: "Преимущества", href: "#" },
   { label: "Отзывы", href: "#" },
-  { label: "Тарифы", href: "#" },
+  { label: "Каталог", href: "#" },
   { label: "Вопросы", href: "#" },
 ] as const
 
@@ -52,7 +52,7 @@ export function LpNavbar1() {
         <div className="hidden md:flex flex-row gap-5 w-full justify-end">
           <NavMenuItems />
           <a href="#">
-            <Button>Начать</Button>
+            <Button>Заказать фигурку</Button>
           </a>
         </div>
 
@@ -61,7 +61,7 @@ export function LpNavbar1() {
           <div className="md:hidden flex flex-col gap-5 w-full justify-end pb-2.5">
             <NavMenuItems />
             <a href="#">
-              <Button className="w-full">Начать</Button>
+              <Button className="w-full">Заказать фигурку</Button>
             </a>
           </div>
         )}

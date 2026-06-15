@@ -4,15 +4,15 @@ import { Separator } from "@/components/ui/separator"
 
 const testimonials = [
   {
-    quote: "СмартФлоу помог нам экономить более 10 часов в неделю благодаря автоматизации рутинных задач. Теперь не представляем работу без него!",
-    author: "Анна Петрова",
-    role: "Маркетинг-директор, ТехноСтарт",
+    quote: "Заказала фигурку своей фурсоны-волчицы — это просто космос! Детализация шерсти и роспись глаз превзошли все ожидания. Теперь стоит на самом видном месте.",
+    author: "Алина Соколова",
+    role: "Заказчица фигурки, Москва",
     image: "https://github.com/shadcn.png",
   },
   {
-    quote: "Этот инструмент изменил работу нашей удаленной команды. Автоматизация процессов работает просто невероятно.",
-    author: "Михаил Козлов",
-    role: "Основатель DigitalWave",
+    quote: "Сделали фигурку моего дракона по арту на подарок. Мастер согласовывал каждую деталь, итог — один в один с рефом. Друг был в полном восторге!",
+    author: "Дмитрий Орлов",
+    role: "Заказчик кастома, Санкт-Петербург",
     image: "https://github.com/shadcn.png",
   },
 ]
@@ -23,11 +23,11 @@ export function TestimonialsSection5() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-4 md:gap-5 max-w-xl text-center md:text-left">
-            <p className="text-sm md:text-base font-semibold text-muted-foreground leading-[20px] md:leading-6">
+            <p className="text-sm md:text-base font-semibold text-primary leading-[20px] md:leading-6">
               Отзывы
             </p>
             <h2 id="testimonial-title" className="text-3xl md:text-4xl font-bold">
-              Нам доверяют лучшие команды
+              Что говорят владельцы наших фигурок
             </h2>
           </div>
 
